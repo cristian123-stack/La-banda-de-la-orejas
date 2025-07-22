@@ -1,0 +1,79 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Home - Login</title>
+    <!-- Bootstrap CSS CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+    <!-- Tu CSS personalizado -->
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow-sm py-3">
+  <div class="container-fluid">
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link text-white" href="{% url 'home' %}">Inicio</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-white" href="{% url 'sobrenosotros' %}">Sobre nosotros</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-white" href="{% url 'contacto' %}">Contactanos</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="container vh-100 d-flex flex-column justify-content-center align-items-center">
+  <h1 class="display-4 fw-bold mb-5 text-center">
+    Software de Gestión Veterinaria <br>
+    <small class="text-muted">La Banda de la Oreja🦴🐶</small>
+  </h1>
+
+  <div class="login-container w-100 d-flex flex-column justify-content-center align-items-center" style="max-width: 400px;">
+    <h2 class="mb-4">Iniciar sesión</h2>
+    {% if messages %}
+      {% for message in messages %}
+        <div class="alert alert-danger alert-dismissible fade show w-100 text-center" role="alert">
+          {{ message }}
+          <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Cerrar"></button>
+        </div>
+      {% endfor %}
+    {% endif %}
+    <form method="post" class="w-100">
+      {% csrf_token %}
+      <div class="mb-3">
+        <label for="username" class="form-label">Usuario:</label>
+        <input type="text" class="form-control" id="username" name="username" required>
+      </div>
+      <div class="mb-3">
+        <label for="password" class="form-label">Contraseña:</label>
+        <input type="password" class="form-control" id="password" name="password" required>
+      </div>
+      <button type="submit" class="btn btn-primary w-100">Entrar</button>
+    </form>
+  </div>
+</div>
+
+<footer class="sobrenosotros-footer">
+  <a href="https://www.instagram.com/" target="_blank" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+  <a href="mailto:cultivvajobs@inacapmail.cl" aria-label="Correo electrónico"><i class="bi bi-envelope-fill"></i></a>
+  <a href="tel:+56935820014" aria-label="Teléfono"><i class="bi bi-telephone-fill"></i></a>
+  <a href="https://www.linkedin.com/" target="_blank" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
+
+</body>
+</html>

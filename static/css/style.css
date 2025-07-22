@@ -1,0 +1,149 @@
+/* Estilos existentes */
+body {
+    background-image: url('../img/fondo.jpg'); /* Ajusta la ruta según tu estructura */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* Para la página Sobre Nosotros, se sobreescriben algunos estilos */
+.sobrenosotros-body {
+    color: #eee;
+    font-family: 'Poppins', sans-serif;
+    min-height: 100vh;
+    padding-bottom: 80px; /* espacio para footer */
+}
+
+.sobrenosotros-body h1,
+.sobrenosotros-body h3 {
+    color: #f8f9fa;
+}
+
+.sobrenosotros-body a {
+    color: #0d6efd;
+    text-decoration: none;
+}
+
+.sobrenosotros-body a:hover {
+    text-decoration: underline;
+    color: #0a58ca;
+}
+
+.sobrenosotros-container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+.sobrenosotros-container ul li {
+    margin-bottom: 8px;
+}
+
+/* Footer para Sobre Nosotros */
+footer.sobrenosotros-footer {
+    background-color: #1e1e1e;
+    padding: 20px 0;
+    text-align: center;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    z-index: 100;
+}
+
+footer.sobrenosotros-footer a {
+    color: #eee;
+    margin: 0 15px;
+    font-size: 1.5rem;
+    transition: color 0.3s ease;
+}
+
+footer.sobrenosotros-footer a:hover {
+    color: #0d6efd;
+}
+
+/* Mantener los estilos para login y contacto originales */
+
+.login-container {
+    background-color: rgba(255, 255, 255, 0.85);
+    padding: 30px 40px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.3);
+}
+
+.contact-container form {
+  background: #f9f9f9;
+  padding: 25px 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  transition: box-shadow 0.3s ease;
+}
+
+.contact-container form:hover {
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+.contact-container form p {
+  margin-bottom: 1rem;
+}
+
+.contact-container form p input,
+.contact-container form p textarea {
+  width: 100%;
+  border: 1.5px solid #ddd;
+  border-radius: 8px;
+  padding: 10px 12px;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+  box-sizing: border-box;
+}
+
+.contact-container form p input:focus,
+.contact-container form p textarea:focus {
+  border-color: #0d6efd;
+  box-shadow: 0 0 8px rgba(13, 110, 253, 0.25);
+  outline: none;
+}
+
+.contact-container form .mb-3 {
+  margin-bottom: 1rem;
+}
+
+.contact-container form label {
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  display: block;
+}
+
+.contact-container form input,
+.contact-container form textarea {
+  width: 100%;
+  border: 1.5px solid #ddd;
+  border-radius: 8px;
+  padding: 10px 12px;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+  box-sizing: border-box;
+}
+
+.contact-container form input:focus,
+.contact-container form textarea:focus {
+  border-color: #0d6efd;
+  box-shadow: 0 0 8px rgba(13, 110, 253, 0.25);
+  outline: none;
+}
+
+.contact-container form button.btn-primary {
+  border-radius: 8px;
+  padding: 12px;
+  font-weight: 600;
+  font-size: 1.1rem;
+  transition: background-color 0.3s ease;
+}
+
+.contact-container form button.btn-primary:hover {
+  background-color: #0b5ed7;
+}
